@@ -1,0 +1,7 @@
+/* Event Spotlight booth counter: tablet or phone placed at a sponsor booth. */
+.bh{background:#101B33;color:#fff;padding:10px 16px;display:flex;gap:12px;align-items:center;position:sticky;top:0;z-index:10}.bh b{font:700 20px var(--display);text-transform:uppercase;letter-spacing:.04em}
+.bw{max-width:900px;margin:0 auto;padding:16px}
+.stage-c{position:relative;background:#0B1226;border-radius:4px;overflow:hidden;touch-action:none;width:100%;max-width:520px;margin:0 auto;aspect-ratio:4/5}.stage-c canvas,.stage-c video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bigcount{font:700 120px/1 var(--display);color:var(--blue);text-align:center}.bigcount small{display:block;font:600 18px var(--font);color:var(--muted)}
+.hbar{display:flex;align-items:flex-end;gap:6px;height:120px;margin-top:10px}.hbar div{flex:1;background:var(--blue);min-height:2px;position:relative}.hbar span{position:absolute;bottom:-20px;left:0;right:0;text-align:center;font-size:12px;color:var(--muted)}
+.steps{display:flex;gap:6px;margin:12px 0}.steps span{flex:1;padding:8px;border-top:4px solid var(--line);font:700 15px var(--display);text-transform:uppercase;color:var(--muted)}.steps span.on{border-color:var(--blue);color:var(--ink)}.steps span.done{border-color:var(--green);color:var(--green)}

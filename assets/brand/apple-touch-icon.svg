@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="apple-touch-icon" viewBox="0 0 180 180" width="180" height="180" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif" role="img" aria-labelledby="apple-touch-icon-title apple-touch-icon-desc">
+    <title id="apple-touch-icon-title">FZ touch icon</title><desc id="apple-touch-icon-desc">FZ touch icon</desc>
+    <defs>
+    <linearGradient id="apple-touch-icon-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087BFF"/><stop offset="1" stop-color="#41D5E8"/></linearGradient>
+    <linearGradient id="apple-touch-icon-glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".98"/><stop offset="1" stop-color="#EDF6FF" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="apple-touch-icon-silk" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#E9F7FF" stop-opacity=".12"/><stop offset=".4" stop-color="#A9DAFF" stop-opacity=".48"/><stop offset=".48" stop-color="#FFF"/><stop offset=".55" stop-color="#4EA6F4" stop-opacity=".65"/><stop offset=".72" stop-color="#D2F3FF" stop-opacity=".65"/><stop offset="1" stop-color="#F4FBFF" stop-opacity="0"/></linearGradient>
+    <radialGradient id="apple-touch-icon-halo"><stop stop-color="#BCE9FF" stop-opacity=".7"/><stop offset="1" stop-color="#DFF3FF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="apple-touch-icon-orb" cx=".3" cy=".2"><stop stop-color="#FFF"/><stop offset=".25" stop-color="#B8EDFF"/><stop offset=".6" stop-color="#53B9F2"/><stop offset="1" stop-color="#0B72CF"/></radialGradient>
+    <filter id="apple-touch-icon-shadow" x="-25%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#477EAE" flood-opacity=".10"/></filter>
+    <marker id="apple-touch-icon-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m1 1 4 3-4 3" fill="none" stroke="#65ACEE" stroke-width="1.3"/></marker>
+    </defs><style>
+    #apple-touch-icon {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+    #apple-touch-icon .float {animation:apple-touch-icon-float 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #apple-touch-icon .float-alt {animation:apple-touch-icon-float 12s ease-in-out -4s infinite reverse;transform-box:fill-box;transform-origin:center}
+    #apple-touch-icon .pulse {animation:apple-touch-icon-pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #apple-touch-icon .flow {stroke-dasharray:6 11;animation:apple-touch-icon-flow 3s linear infinite}
+    #apple-touch-icon .spin {animation:apple-touch-icon-spin 22s linear infinite;transform-box:fill-box;transform-origin:center}
+    #apple-touch-icon .scan {animation:apple-touch-icon-scan 7s ease-in-out infinite}
+    #apple-touch-icon .bar {animation:apple-touch-icon-bar 6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+    #apple-touch-icon .draw {stroke-dasharray:2200;stroke-dashoffset:0;animation:apple-touch-icon-draw 12s ease-in-out infinite}
+    @keyframes apple-touch-icon-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes apple-touch-icon-pulse{0%,100%{opacity:.55}50%{opacity:1}}
+    @keyframes apple-touch-icon-flow{to{stroke-dashoffset:-68}}
+    @keyframes apple-touch-icon-spin{to{transform:rotate(360deg)}}
+    @keyframes apple-touch-icon-scan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(235px);opacity:.9}}
+    @keyframes apple-touch-icon-bar{0%,100%{transform:scaleY(.92)}50%{transform:scaleY(1)}}
+    @keyframes apple-touch-icon-draw{0%,100%{stroke-dashoffset:100}50%{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){#apple-touch-icon *,#apple-touch-icon *::before,#apple-touch-icon *::after{animation:none!important;transition:none!important}}
+    </style><rect width="180" height="180" rx="40" fill="#10233F"/><g transform="translate(-15 16) scale(2)"><path d="M25 22h25v7H33v8h14v7H33v16h-8zM54 22h28v6L63 53h20v7H53v-6l19-25H54z" fill="white"/></g><circle cx="149" cy="143" r="7" fill="#38C7E7"/></svg>

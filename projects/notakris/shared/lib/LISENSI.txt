@@ -1,0 +1,5 @@
+Pustaka open source yang disertakan (dimuat lokal, tanpa instalasi):
+- sql.js 1.10.3 (SQLite dalam WebAssembly) — MIT License — https://github.com/sql-js/sql.js
+- SheetJS Community Edition 0.18.5 (Excel) — Apache License 2.0 — https://github.com/SheetJS/sheetjs
+- jsPDF 2.5.1 (PDF) — MIT License — https://github.com/parallax/jsPDF
+- jsPDF-AutoTable 3.8.2 (tabel PDF) — MIT License — https://github.com/simonbengtsson/jsPDF-AutoTable

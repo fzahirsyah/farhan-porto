@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eventspotlight-type-label" viewBox="0 0 420 80" width="420" height="80" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif" role="img" aria-labelledby="eventspotlight-type-label-title eventspotlight-type-label-desc">
+    <title id="eventspotlight-type-label-title">Event Spotlight typographic label</title><desc id="eventspotlight-type-label-desc">Text label based on the supplied product name; not an official logo.</desc>
+    <defs>
+    <linearGradient id="eventspotlight-type-label-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087BFF"/><stop offset="1" stop-color="#41D5E8"/></linearGradient>
+    <linearGradient id="eventspotlight-type-label-glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".98"/><stop offset="1" stop-color="#EDF6FF" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="eventspotlight-type-label-silk" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#E9F7FF" stop-opacity=".12"/><stop offset=".4" stop-color="#A9DAFF" stop-opacity=".48"/><stop offset=".48" stop-color="#FFF"/><stop offset=".55" stop-color="#4EA6F4" stop-opacity=".65"/><stop offset=".72" stop-color="#D2F3FF" stop-opacity=".65"/><stop offset="1" stop-color="#F4FBFF" stop-opacity="0"/></linearGradient>
+    <radialGradient id="eventspotlight-type-label-halo"><stop stop-color="#BCE9FF" stop-opacity=".7"/><stop offset="1" stop-color="#DFF3FF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="eventspotlight-type-label-orb" cx=".3" cy=".2"><stop stop-color="#FFF"/><stop offset=".25" stop-color="#B8EDFF"/><stop offset=".6" stop-color="#53B9F2"/><stop offset="1" stop-color="#0B72CF"/></radialGradient>
+    <filter id="eventspotlight-type-label-shadow" x="-25%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#477EAE" flood-opacity=".10"/></filter>
+    <marker id="eventspotlight-type-label-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m1 1 4 3-4 3" fill="none" stroke="#65ACEE" stroke-width="1.3"/></marker>
+    </defs><style>
+    #eventspotlight-type-label {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+    #eventspotlight-type-label .float {animation:eventspotlight-type-label-float 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #eventspotlight-type-label .float-alt {animation:eventspotlight-type-label-float 12s ease-in-out -4s infinite reverse;transform-box:fill-box;transform-origin:center}
+    #eventspotlight-type-label .pulse {animation:eventspotlight-type-label-pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #eventspotlight-type-label .flow {stroke-dasharray:6 11;animation:eventspotlight-type-label-flow 3s linear infinite}
+    #eventspotlight-type-label .spin {animation:eventspotlight-type-label-spin 22s linear infinite;transform-box:fill-box;transform-origin:center}
+    #eventspotlight-type-label .scan {animation:eventspotlight-type-label-scan 7s ease-in-out infinite}
+    #eventspotlight-type-label .bar {animation:eventspotlight-type-label-bar 6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+    #eventspotlight-type-label .draw {stroke-dasharray:2200;stroke-dashoffset:0;animation:eventspotlight-type-label-draw 12s ease-in-out infinite}
+    @keyframes eventspotlight-type-label-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes eventspotlight-type-label-pulse{0%,100%{opacity:.55}50%{opacity:1}}
+    @keyframes eventspotlight-type-label-flow{to{stroke-dashoffset:-68}}
+    @keyframes eventspotlight-type-label-spin{to{transform:rotate(360deg)}}
+    @keyframes eventspotlight-type-label-scan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(235px);opacity:.9}}
+    @keyframes eventspotlight-type-label-bar{0%,100%{transform:scaleY(.92)}50%{transform:scaleY(1)}}
+    @keyframes eventspotlight-type-label-draw{0%,100%{stroke-dashoffset:100}50%{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){#eventspotlight-type-label *,#eventspotlight-type-label *::before,#eventspotlight-type-label *::after{animation:none!important;transition:none!important}}
+    </style><text x="8" y="55" font-size="48" fill="#7850D8" font-weight="600" text-anchor="start" >Event Spotlight</text></svg>

@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "source_checks": {
+    "chapters": [
+      "home",
+      "about",
+      "systems",
+      "automation",
+      "datascience",
+      "documentation",
+      "engineering",
+      "projects",
+      "experience",
+      "contact"
+    ],
+    "chapter_count": 10,
+    "h1_count": 1,
+    "unique_ids": "passed",
+    "main_page_links": "passed",
+    "project_script_style_image_references": "passed",
+    "javascript_syntax": "passed",
+    "original_files": [
+      {
+        "file": "farhan-original.png",
+        "unchanged": true
+      },
+      {
+        "file": "farhan-zahirsyah-cv-oct-2026.pdf",
+        "unchanged": true
+      }
+    ],
+    "unchanged_app_js_css_files": 131
+  },
+  "http_checks": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/assets/portrait/farhan-original.png",
+      "status": 200
+    },
+    {
+      "route": "/assets/resume/farhan-zahirsyah-cv-oct-2026.pdf",
+      "status": 200
+    },
+    {
+      "route": "/js/vendor/three.min.js",
+      "status": 200
+    },
+    {
+      "route": "/projects/pradi/index.html",
+      "status": 200
+    },
+    {
+      "route": "/projects/accuz/index.html",
+      "status": 200
+    },
+    {
+      "route": "/projects/eventspotlight/index.html",
+      "status": 200
+    },
+    {
+      "route": "/projects/notakris/index.html",
+      "status": 200
+    },
+    {
+      "route": "/projects/eventspotlight/erp/index.html",
+      "status": 200
+    },
+    {
+      "route": "/projects/notakris/notaris/index.html",
+      "status": 200
+    }
+  ],
+  "interaction_checks": {
+    "status": "passed",
+    "checks": [
+      "All ten chapters initialize without runtime errors.",
+      "Mobile navigation opens, follows a chapter link, and closes.",
+      "Methodology controls update the selected explanation.",
+      "Architecture modules open the matching engineering details and close.",
+      "Workflow steps update sample CRM state and human handover.",
+      "Data tabs reveal the correct panel and prepared profiles route correctly.",
+      "Keyboard tab navigation and synthetic analytics refresh work.",
+      "Documentation stages update illustration emphasis and explanation.",
+      "Spreadsheet totals recalculate from the displayed inputs and cell inspection works.",
+      "The motion toggle switches to a natural, reduced-motion presentation.",
+      "Document scan completes with a review signal, not a fraud conclusion.",
+      "The complete workflow simulation reaches human handover and becomes replayable.",
+      "The simulated API pipeline returns its synthetic response.",
+      "Career milestones behave as an accordion.",
+      "Story playback starts, pauses and resumes without manual scrolling.",
+      "Playback can skip through all ten chapters and return to the previous chapter.",
+      "Playback speed changes and interaction with a project pauses the story.",
+      "Playback exits to the current chapter with normal navigation restored.",
+      "Escape exits playback even when a transport control has keyboard focus.",
+      "Demo return links resolve from nested routes and survive body replacement."
+    ],
+    "limits": "DOM interaction tests do not verify visual layout, GPU rendering or native browser behavior."
+  },
+  "browser_checks": {
+    "browser": "Google Chrome",
+    "verified": [
+      "Desktop hero rendering",
+      "Four project cards and prominent Try controls in one pinned desktop viewport",
+      "Story starts without manual scrolling",
+      "Previous/next playback controls",
+      "Workflow and data chapter state changes during playback",
+      "Phone hero and project layouts at 375 \u00d7 667",
+      "Accu-Z overview and invoice route",
+      "Back-to-Portfolio link resolves to /index.html#projects"
+    ],
+    "limits": [
+      "No Safari or Firefox testing.",
+      "Not every workflow of every supplied application was tested.",
+      "The complete 176-second story was not watched uninterrupted; transport and representative timed scenes were verified."
+    ]
+  },
+  "errors": []
+}

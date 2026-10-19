@@ -1,0 +1,191 @@
+/* Buku — printable documents (sales orders, invoices, credit notes, kwitansi, statements).
+   Fixed physical sizes so the screen preview matches the PDF. Colors stay light in dark mode. */
+
+.doc-paper {
+  --d-ink: #111;
+  --d-line: #222;
+  --d-soft: #f3f6f8;
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: #fff;
+  color: var(--d-ink);
+  font-family: var(--d-font);
+  font-size: var(--d-size);
+  line-height: 1.2;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08), 0 12px 40px rgba(0,0,0,.12);
+  color-scheme: light;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.doc-paper.d-paper-Letter { width: 216mm; min-height: 279mm; }
+.doc-paper.d-paper-A5 { width: 148mm; min-height: 210mm; }
+.d-inner { position: relative; z-index: 1; padding: 10mm 12mm 0; flex: 1; display: flex; flex-direction: column; }
+.d-m-narrow .d-inner { padding: 9mm 9mm 0; }
+.d-m-wide .d-inner { padding: 20mm 20mm 0; }
+.doc-paper.d-has-bg::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; background-image: var(--d-bg); background-size: cover; background-position: center; opacity: var(--d-bg-op);
+}
+.doc-paper * { box-sizing: border-box; }
+.doc-paper p { margin: 0 0 4px; }
+.doc-paper ul { margin: 2px 0 4px; padding-left: 16px; }
+.doc-paper li { margin: 0; }
+.doc-paper table { border-collapse: collapse; width: 100%; }
+.doc-paper th, .doc-paper td { text-align: left; vertical-align: top; padding: 0; font-weight: normal; }
+.doc-paper .n { text-align: right; white-space: nowrap; }
+
+/* Header */
+.d-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; margin-bottom: 5mm; }
+.d-logo { display: block; object-fit: contain; object-position: left center; }
+.d-logo-s { height: 11mm; max-width: 55mm; }
+.d-logo-m { height: 13mm; max-width: 72mm; }
+.d-logo-l { height: 21mm; max-width: 95mm; }
+.d-wordmark { font-size: 20pt; font-weight: 700; color: var(--d-accent); letter-spacing: -0.02em; }
+.d-socials { list-style: none; margin: 0; padding: 0; font-size: 0.9em; line-height: 1.55; }
+.d-socials li { display: flex; align-items: center; gap: 2mm; justify-content: flex-start; }
+.d-ico { width: 3.6mm; height: 3.6mm; color: var(--d-accent); display: inline-flex; }
+.d-ico svg { width: 100%; height: 100%; }
+.d-title { font-size: 16pt; letter-spacing: 0.04em; margin: -2mm 0 5mm; color: var(--d-accent); font-weight: 700; }
+
+/* Company / party / info boxes */
+.d-top { display: grid; grid-template-columns: 1.45fr 1fr; gap: 6mm; align-items: start; margin-bottom: 4mm; }
+.d-box { border: 0.3mm solid var(--d-line); }
+.d-company { padding: 0; }
+.d-co-name { font-weight: 700; padding: 1.5mm 2mm 0.5mm; }
+.d-co-addr { padding: 0 2mm 1.5mm; font-size: 0.95em; border-bottom: 0.3mm solid var(--d-line); }
+.d-party { margin: 1mm 0; }
+.d-party th { width: 21mm; padding: 0.3mm 2mm; font-weight: 700; }
+.d-party .d-colon { width: 4mm; padding: 0.3mm 1mm; }
+.d-party td { padding: 0.3mm 2mm 0.3mm 0; }
+.d-info th, .d-info td { border: 0.3mm solid var(--d-line); padding: 0.7mm 1.6mm; }
+.d-info th { font-weight: 700; width: 44%; white-space: nowrap; }
+
+/* Lines */
+.d-lines { margin: 2mm 0 3mm; border: 0.4mm solid var(--d-line); }
+.d-lines thead th { font-weight: 700; text-align: center; padding: 1.1mm 1.5mm; border: 0.3mm solid var(--d-line); }
+.d-lines thead th.n { text-align: center; }
+.d-lines tbody td { padding: 1.1mm 1.5mm; border: 0.3mm solid var(--d-line); }
+.d-lines tbody td.c-description, .d-lines tbody td.c-item { white-space: pre-line; }
+.d-lines tbody td.c-no, .d-lines tbody td.c-qty, .d-lines tbody td.c-start, .d-lines tbody td.c-end, .d-lines tbody td.c-note { text-align: center; }
+.d-lines tbody tr.d-empty td { height: 6mm; }
+.d-lines .c-no { width: 8mm; }
+.d-lines th.c-item { width: 19mm; } .d-lines th.c-start, .d-lines th.c-end { width: 15mm; } .d-lines th.c-qty { width: 15mm; }
+.d-lines th.c-price { width: 25mm; } .d-lines th.c-amount { width: 26mm; } .d-lines th.c-discount { width: 21mm; } .d-lines th.c-note { width: 15mm; } .d-lines th.c-tax { width: 16mm; }
+.d-lines th.c-description { min-width: 42mm; }
+.d-totals th { font-weight: 700; text-align: center; border: 0.3mm solid var(--d-line); padding: 0.9mm 1.5mm; white-space: nowrap; }
+.d-totals td { border: 0.3mm solid var(--d-line); padding: 0.9mm 1.5mm; }
+.d-totals td.d-note { vertical-align: middle; }
+.d-totals .d-grand th, .d-totals .d-grand td { font-weight: 700; }
+.d-extra { font-size: 0.9em; margin: -1.5mm 0 3mm; text-align: right; }
+.d-terbilang { margin: 0 0 3mm; }
+
+/* Text blocks */
+.d-block { margin: 0 0 2mm; text-align: justify; font-size: 0.94em; }
+.d-intro { margin: 0 2mm 3mm; }
+.d-terms { margin: 0 2mm 3mm; }
+.d-notes { margin: 0 4mm 3mm; font-size: 0.97em; }
+.d-legal { padding: 1.5mm 2mm; font-size: 0.92em; }
+.d-legal strong:first-child { display: inline-block; margin-bottom: 1mm; }
+
+/* Signatures */
+.d-signs { margin: 2mm 0 3mm; padding-left: 8mm; }
+.d-sig-label { margin-bottom: 2mm; }
+.d-sig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14mm; }
+.d-sig { position: relative; }
+.d-sig-space { height: 15mm; position: relative; display: flex; align-items: flex-end; gap: 4mm; }
+.d-sig-img { max-height: 20mm; max-width: 50mm; object-fit: contain; }
+.d-stamp-img { max-height: 22mm; max-width: 26mm; object-fit: contain; }
+.d-emeterai { width: 22mm; height: 22mm; border: 0.3mm dashed #999; display: grid; place-items: center; font-size: 7pt; color: #888; }
+.d-sig-line { border-top: 0.3mm solid var(--d-line); width: 62mm; margin-bottom: 1mm; }
+.d-sig-name, .d-sig-org, .d-sig-date { font-size: 0.95em; }
+.d-stamp-req { margin-top: 2mm; font-weight: 700; text-decoration: underline; }
+
+/* Payment box & footer */
+.d-pay { padding: 1.5mm 2.5mm; margin: 0 0 4mm; }
+.d-pay p { margin: 0 0 1mm; }
+.d-bank { margin-top: 1mm; }
+.d-bank table { width: auto; margin-top: 0.5mm; }
+.d-bank td { padding: 0.2mm 3mm 0.2mm 0; }
+.d-foot {
+  margin: auto -12mm 0; padding: 3mm 12mm; background: var(--d-accent); color: #fff; text-align: center; font-weight: 700; font-size: 0.95em; letter-spacing: 0.01em;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.d-m-narrow .d-foot { margin-left: -9mm; margin-right: -9mm; }
+.d-m-wide .d-foot { margin-left: -20mm; margin-right: -20mm; }
+.doc-paper:not(:has(.d-foot)) .d-inner { padding-bottom: 10mm; }
+
+.d-watermark {
+  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%) rotate(-24deg); z-index: 0;
+  font-size: 80pt; font-weight: 800; letter-spacing: .1em; color: rgba(180, 35, 24, 0.12); pointer-events: none; white-space: nowrap;
+}
+
+/* Receipt */
+.d-receipt { border: 0.4mm solid var(--d-line); padding: 5mm 6mm; margin-bottom: 6mm; position: relative; }
+.d-r-no { font-weight: 700; margin-bottom: 3mm; }
+.d-r-table th { width: 42mm; font-weight: 700; padding: 1.4mm 0; }
+.d-r-table td { padding: 1.4mm 0; border-bottom: 0.2mm dotted #888; }
+.d-r-words { font-size: 1.05em; }
+.d-r-amount { margin-top: 5mm; display: inline-block; padding: 2.5mm 6mm; border: 0.5mm solid var(--d-accent); font-size: 14pt; font-weight: 700; transform: skewX(-8deg); }
+.d-kind-receipt .d-signs { padding-left: 0; }
+.d-kind-receipt .d-sig-row { grid-template-columns: 1fr 1fr; }
+.d-kind-receipt .d-sig { grid-column: 2; }
+
+/* Statement */
+.d-statement td, .d-statement th { font-size: 0.95em; }
+.d-statement .d-muted td { color: #555; font-style: italic; }
+.d-aging { margin: 0 0 5mm; border: 0.3mm solid var(--d-line); }
+.d-aging caption { text-align: left; font-weight: 700; padding-bottom: 1mm; }
+.d-aging th, .d-aging td { border: 0.3mm solid var(--d-line); padding: 1.2mm 2mm; text-align: center; }
+.d-aging th { font-weight: 700; background: var(--d-soft); }
+
+/* ---------- Classic ---------- */
+.d-layout-classic { --d-line: #444; }
+.d-layout-classic .d-head { border-bottom: 0.6mm solid var(--d-accent); padding-bottom: 4mm; }
+.d-layout-classic .d-title { color: var(--d-ink); text-align: right; margin-top: -14mm; font-size: 18pt; }
+.d-layout-classic .d-company { border: 0; }
+.d-layout-classic .d-co-addr { border-bottom: 0.2mm solid #bbb; }
+.d-layout-classic .d-lines thead th { background: var(--d-soft); }
+.d-layout-classic .d-lines tbody td { border-left: 0; border-right: 0; }
+.d-layout-classic .d-lines { border-left: 0; border-right: 0; }
+
+/* ---------- Modern ---------- */
+.d-layout-modern { --d-line: #d5dde3; }
+.d-layout-modern .d-head { margin: -10mm -12mm 5mm; padding: 8mm 12mm; background: var(--d-accent); color: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.d-layout-modern .d-ico { color: #fff; }
+.d-layout-modern .d-wordmark { color: #fff; }
+.d-layout-modern .d-title { color: var(--d-accent); font-size: 22pt; font-weight: 800; letter-spacing: 0.02em; }
+.d-layout-modern .d-box { border-color: transparent; background: var(--d-soft); border-radius: 2mm; }
+.d-layout-modern .d-info th, .d-layout-modern .d-info td { border: 0; border-bottom: 0.3mm solid #fff; }
+.d-layout-modern .d-co-addr { border-bottom-color: #fff; }
+.d-layout-modern .d-lines { border: 0; }
+.d-layout-modern .d-lines thead th { background: var(--d-accent); color: #fff; border: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.d-layout-modern .d-lines tbody td { border: 0; border-bottom: 0.3mm solid var(--d-line); }
+.d-layout-modern .d-totals th, .d-layout-modern .d-totals td { border: 0; border-bottom: 0.3mm solid var(--d-line); }
+.d-layout-modern .d-totals .d-grand th, .d-layout-modern .d-totals .d-grand td { background: var(--d-soft); color: var(--d-accent); font-size: 1.1em; }
+
+/* ---------- Compact ---------- */
+.d-layout-compact .d-inner { padding: 9mm 10mm 0; }
+.d-layout-compact .d-head { margin-bottom: 4mm; }
+.d-layout-compact .d-lines tbody td, .d-layout-compact .d-lines thead th { padding: 0.9mm 1.5mm; }
+.d-layout-compact .d-sig-space { height: 16mm; }
+.d-layout-compact .d-top { margin-bottom: 3mm; }
+
+/* ---------- Preview wrapper in the app ---------- */
+.doc-stage { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 24px; overflow: auto; }
+.doc-stage .doc-paper { transform-origin: top center; }
+.doc-scale { width: 100%; overflow: hidden; }
+
+@media print {
+  body.printing-doc .sidebar, body.printing-doc .topbar, body.printing-doc #main > :not(.doc-print-root), body.printing-doc #toasts { display: none !important; }
+  body.printing-doc #main { padding: 0 !important; }
+  body.printing-doc .doc-print-root { display: block !important; }
+  body.printing-doc .doc-stage { padding: 0 !important; border: 0 !important; background: none !important; overflow: visible !important; }
+  body.printing-doc .doc-paper { box-shadow: none !important; margin: 0 !important; transform: none !important; min-height: 0; }
+  body.printing-doc .doc-scale { height: auto !important; overflow: visible !important; }
+}
+
+/* Documents print edge-to-edge (their own margins are inside the paper). */
+@page doc { size: A4; margin: 0; }
+.doc-paper { page: doc; }

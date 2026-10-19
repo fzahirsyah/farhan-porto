@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="wordmark" viewBox="0 0 395 78" width="395" height="78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif" role="img" aria-labelledby="wordmark-title wordmark-desc">
+    <title id="wordmark-title">Farhan Zahirsyah wordmark</title><desc id="wordmark-desc">Farhan Zahirsyah wordmark</desc>
+    <defs>
+    <linearGradient id="wordmark-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087BFF"/><stop offset="1" stop-color="#41D5E8"/></linearGradient>
+    <linearGradient id="wordmark-glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".98"/><stop offset="1" stop-color="#EDF6FF" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="wordmark-silk" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#E9F7FF" stop-opacity=".12"/><stop offset=".4" stop-color="#A9DAFF" stop-opacity=".48"/><stop offset=".48" stop-color="#FFF"/><stop offset=".55" stop-color="#4EA6F4" stop-opacity=".65"/><stop offset=".72" stop-color="#D2F3FF" stop-opacity=".65"/><stop offset="1" stop-color="#F4FBFF" stop-opacity="0"/></linearGradient>
+    <radialGradient id="wordmark-halo"><stop stop-color="#BCE9FF" stop-opacity=".7"/><stop offset="1" stop-color="#DFF3FF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="wordmark-orb" cx=".3" cy=".2"><stop stop-color="#FFF"/><stop offset=".25" stop-color="#B8EDFF"/><stop offset=".6" stop-color="#53B9F2"/><stop offset="1" stop-color="#0B72CF"/></radialGradient>
+    <filter id="wordmark-shadow" x="-25%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#477EAE" flood-opacity=".10"/></filter>
+    <marker id="wordmark-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m1 1 4 3-4 3" fill="none" stroke="#65ACEE" stroke-width="1.3"/></marker>
+    </defs><style>
+    #wordmark {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+    #wordmark .float {animation:wordmark-float 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #wordmark .float-alt {animation:wordmark-float 12s ease-in-out -4s infinite reverse;transform-box:fill-box;transform-origin:center}
+    #wordmark .pulse {animation:wordmark-pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #wordmark .flow {stroke-dasharray:6 11;animation:wordmark-flow 3s linear infinite}
+    #wordmark .spin {animation:wordmark-spin 22s linear infinite;transform-box:fill-box;transform-origin:center}
+    #wordmark .scan {animation:wordmark-scan 7s ease-in-out infinite}
+    #wordmark .bar {animation:wordmark-bar 6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+    #wordmark .draw {stroke-dasharray:2200;stroke-dashoffset:0;animation:wordmark-draw 12s ease-in-out infinite}
+    @keyframes wordmark-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes wordmark-pulse{0%,100%{opacity:.55}50%{opacity:1}}
+    @keyframes wordmark-flow{to{stroke-dashoffset:-68}}
+    @keyframes wordmark-spin{to{transform:rotate(360deg)}}
+    @keyframes wordmark-scan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(235px);opacity:.9}}
+    @keyframes wordmark-bar{0%,100%{transform:scaleY(.92)}50%{transform:scaleY(1)}}
+    @keyframes wordmark-draw{0%,100%{stroke-dashoffset:100}50%{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){#wordmark *,#wordmark *::before,#wordmark *::after{animation:none!important;transition:none!important}}
+    </style><text x="0" y="34" font-size="34" fill="#10233F" font-weight="600" text-anchor="start" >Farhan Zahirsyah</text><text x="1" y="61" font-size="10" fill="#61748D" font-weight="500" text-anchor="start" letter-spacing="2">AI PRODUCT ENGINEER  /  DATA SCIENTIST</text></svg>

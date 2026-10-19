@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="glass-orbits" viewBox="0 0 1200 800" width="1200" height="800" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif" role="img" aria-labelledby="glass-orbits-title glass-orbits-desc">
+    <title id="glass-orbits-title">Glass orbit rings</title><desc id="glass-orbits-desc">Glass orbit rings</desc>
+    <defs>
+    <linearGradient id="glass-orbits-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087BFF"/><stop offset="1" stop-color="#41D5E8"/></linearGradient>
+    <linearGradient id="glass-orbits-glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".98"/><stop offset="1" stop-color="#EDF6FF" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="glass-orbits-silk" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#E9F7FF" stop-opacity=".12"/><stop offset=".4" stop-color="#A9DAFF" stop-opacity=".48"/><stop offset=".48" stop-color="#FFF"/><stop offset=".55" stop-color="#4EA6F4" stop-opacity=".65"/><stop offset=".72" stop-color="#D2F3FF" stop-opacity=".65"/><stop offset="1" stop-color="#F4FBFF" stop-opacity="0"/></linearGradient>
+    <radialGradient id="glass-orbits-halo"><stop stop-color="#BCE9FF" stop-opacity=".7"/><stop offset="1" stop-color="#DFF3FF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glass-orbits-orb" cx=".3" cy=".2"><stop stop-color="#FFF"/><stop offset=".25" stop-color="#B8EDFF"/><stop offset=".6" stop-color="#53B9F2"/><stop offset="1" stop-color="#0B72CF"/></radialGradient>
+    <filter id="glass-orbits-shadow" x="-25%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#477EAE" flood-opacity=".10"/></filter>
+    <marker id="glass-orbits-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m1 1 4 3-4 3" fill="none" stroke="#65ACEE" stroke-width="1.3"/></marker>
+    </defs><style>
+    #glass-orbits {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+    #glass-orbits .float {animation:glass-orbits-float 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #glass-orbits .float-alt {animation:glass-orbits-float 12s ease-in-out -4s infinite reverse;transform-box:fill-box;transform-origin:center}
+    #glass-orbits .pulse {animation:glass-orbits-pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #glass-orbits .flow {stroke-dasharray:6 11;animation:glass-orbits-flow 3s linear infinite}
+    #glass-orbits .spin {animation:glass-orbits-spin 22s linear infinite;transform-box:fill-box;transform-origin:center}
+    #glass-orbits .scan {animation:glass-orbits-scan 7s ease-in-out infinite}
+    #glass-orbits .bar {animation:glass-orbits-bar 6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+    #glass-orbits .draw {stroke-dasharray:2200;stroke-dashoffset:0;animation:glass-orbits-draw 12s ease-in-out infinite}
+    @keyframes glass-orbits-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes glass-orbits-pulse{0%,100%{opacity:.55}50%{opacity:1}}
+    @keyframes glass-orbits-flow{to{stroke-dashoffset:-68}}
+    @keyframes glass-orbits-spin{to{transform:rotate(360deg)}}
+    @keyframes glass-orbits-scan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(235px);opacity:.9}}
+    @keyframes glass-orbits-bar{0%,100%{transform:scaleY(.92)}50%{transform:scaleY(1)}}
+    @keyframes glass-orbits-draw{0%,100%{stroke-dashoffset:100}50%{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){#glass-orbits *,#glass-orbits *::before,#glass-orbits *::after{animation:none!important;transition:none!important}}
+    </style><ellipse cx="600" cy="400" rx="240" ry="240" fill="none" stroke="#A5CFED" stroke-opacity="0.5" transform="rotate(-30 600 400)" data-part="orbit"/><ellipse cx="600" cy="400" rx="298" ry="209" fill="none" stroke="#A5CFED" stroke-opacity="0.43" transform="rotate(-11 600 400)" data-part="orbit"/><ellipse cx="600" cy="400" rx="356" ry="178" fill="none" stroke="#A5CFED" stroke-opacity="0.36" transform="rotate(8 600 400)" data-part="orbit"/><ellipse cx="600" cy="400" rx="414" ry="147" fill="none" stroke="#A5CFED" stroke-opacity="0.29" transform="rotate(27 600 400)" data-part="orbit"/></svg>

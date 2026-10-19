@@ -1,0 +1,21 @@
+/* Buku — print rules for reports and entries (Save as PDF from the browser print dialog). */
+@page { size: A4; margin: 14mm 12mm; }
+
+@media print {
+  :root { --paper: #fff; --surface: #fff; --surface-2: #f4efec; --text: #000; --muted: #444; --line: #d0d5da; --line-strong: #999; --sky-soft: #fdeceb; color-scheme: light; }
+  body { background: #fff; font-size: 10.5pt; }
+  .sidebar, .topbar, #nav-scrim, #toasts, .filters, .report-filters, .form-actions, .btn, .banner, .note, .empty .btn { display: none !important; }
+  .workspace { margin: 0 !important; }
+  main { padding: 0 !important; max-width: none !important; }
+  .report-sheet, .table-wrap, .facts, .panel { border: 0 !important; padding: 0 !important; border-radius: 0 !important; background: #fff !important; overflow: visible !important; }
+  .print-head { display: flex !important; justify-content: space-between; border-bottom: 1px solid #999; padding-bottom: 6px; margin-bottom: 12px; }
+  .facts { grid-template-columns: repeat(4, 1fr); margin-bottom: 10px; }
+  .data thead { display: table-header-group; }
+  .data thead th { position: static; background: #fff !important; }
+  .data tr, .data td, .data th { page-break-inside: avoid; break-inside: avoid; }
+  .data tr.link:hover td { background: none; }
+  a { color: inherit !important; text-decoration: none !important; }
+  .report-table .subtotal th, .report-table .subtotal td { background: #f4efec !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .report-table .subtotal.final th, .report-table .subtotal.final td { background: #fdeceb !important; }
+  .check-line { font-size: 9pt; }
+}

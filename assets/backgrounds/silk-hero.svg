@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="silk-hero" viewBox="0 0 1440 900" width="1440" height="900" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif" role="img" aria-labelledby="silk-hero-title silk-hero-desc">
+    <title id="silk-hero-title">Silk Hero</title><desc id="silk-hero-desc">Transparent layered silver, cyan and blue ribbons. Five independently addressable layers; suitable behind HTML content.</desc>
+    <defs>
+    <linearGradient id="silk-hero-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087BFF"/><stop offset="1" stop-color="#41D5E8"/></linearGradient>
+    <linearGradient id="silk-hero-glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".98"/><stop offset="1" stop-color="#EDF6FF" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="silk-hero-silk" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#E9F7FF" stop-opacity=".12"/><stop offset=".4" stop-color="#A9DAFF" stop-opacity=".48"/><stop offset=".48" stop-color="#FFF"/><stop offset=".55" stop-color="#4EA6F4" stop-opacity=".65"/><stop offset=".72" stop-color="#D2F3FF" stop-opacity=".65"/><stop offset="1" stop-color="#F4FBFF" stop-opacity="0"/></linearGradient>
+    <radialGradient id="silk-hero-halo"><stop stop-color="#BCE9FF" stop-opacity=".7"/><stop offset="1" stop-color="#DFF3FF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="silk-hero-orb" cx=".3" cy=".2"><stop stop-color="#FFF"/><stop offset=".25" stop-color="#B8EDFF"/><stop offset=".6" stop-color="#53B9F2"/><stop offset="1" stop-color="#0B72CF"/></radialGradient>
+    <filter id="silk-hero-shadow" x="-25%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#477EAE" flood-opacity=".10"/></filter>
+    <marker id="silk-hero-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m1 1 4 3-4 3" fill="none" stroke="#65ACEE" stroke-width="1.3"/></marker>
+    </defs><style>
+    #silk-hero {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+    #silk-hero .float {animation:silk-hero-float 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #silk-hero .float-alt {animation:silk-hero-float 12s ease-in-out -4s infinite reverse;transform-box:fill-box;transform-origin:center}
+    #silk-hero .pulse {animation:silk-hero-pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    #silk-hero .flow {stroke-dasharray:6 11;animation:silk-hero-flow 3s linear infinite}
+    #silk-hero .spin {animation:silk-hero-spin 22s linear infinite;transform-box:fill-box;transform-origin:center}
+    #silk-hero .scan {animation:silk-hero-scan 7s ease-in-out infinite}
+    #silk-hero .bar {animation:silk-hero-bar 6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+    #silk-hero .draw {stroke-dasharray:2200;stroke-dashoffset:0;animation:silk-hero-draw 12s ease-in-out infinite}
+    @keyframes silk-hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes silk-hero-pulse{0%,100%{opacity:.55}50%{opacity:1}}
+    @keyframes silk-hero-flow{to{stroke-dashoffset:-68}}
+    @keyframes silk-hero-spin{to{transform:rotate(360deg)}}
+    @keyframes silk-hero-scan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(235px);opacity:.9}}
+    @keyframes silk-hero-bar{0%,100%{transform:scaleY(.92)}50%{transform:scaleY(1)}}
+    @keyframes silk-hero-draw{0%,100%{stroke-dashoffset:100}50%{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){#silk-hero *,#silk-hero *::before,#silk-hero *::after{animation:none!important;transition:none!important}}
+    </style><ellipse cx="1010" cy="500" rx="520" ry="310" fill="url(#silk-hero-halo)"/><g id="silk-hero-ribbon-1" data-part="ribbon" class="float-alt" opacity="0.3"><path d="M-100 470C180 210,270 740,575 510S1000 330,1540 525L1540 660C1120 460,915 560,640 610S100 440,-100 660Z" fill="url(#silk-hero-silk)"/><path d="M-100 470C180 210,270 740,575 510S1000 330,1540 525" fill="none" stroke="#FFFFFF" stroke-width="1.3"/></g><g id="silk-hero-ribbon-2" data-part="ribbon" class="float" opacity="0.4"><path d="M-100 489C180 229,270 759,575 529S1000 349,1540 544L1540 679C1120 479,915 579,640 629S100 459,-100 679Z" fill="url(#silk-hero-silk)"/><path d="M-100 489C180 229,270 759,575 529S1000 349,1540 544" fill="none" stroke="#FFFFFF" stroke-width="1.3"/></g><g id="silk-hero-ribbon-3" data-part="ribbon" class="float-alt" opacity="0.5"><path d="M-100 508C180 248,270 778,575 548S1000 368,1540 563L1540 698C1120 498,915 598,640 648S100 478,-100 698Z" fill="url(#silk-hero-silk)"/><path d="M-100 508C180 248,270 778,575 548S1000 368,1540 563" fill="none" stroke="#FFFFFF" stroke-width="1.3"/></g><g id="silk-hero-ribbon-4" data-part="ribbon" class="float" opacity="0.6000000000000001"><path d="M-100 527C180 267,270 797,575 567S1000 387,1540 582L1540 717C1120 517,915 617,640 667S100 497,-100 717Z" fill="url(#silk-hero-silk)"/><path d="M-100 527C180 267,270 797,575 567S1000 387,1540 582" fill="none" stroke="#FFFFFF" stroke-width="1.3"/></g><g id="silk-hero-ribbon-5" data-part="ribbon" class="float-alt" opacity="0.7"><path d="M-100 546C180 286,270 816,575 586S1000 406,1540 601L1540 736C1120 536,915 636,640 686S100 516,-100 736Z" fill="url(#silk-hero-silk)"/><path d="M-100 546C180 286,270 816,575 586S1000 406,1540 601" fill="none" stroke="#FFFFFF" stroke-width="1.3"/></g></svg>

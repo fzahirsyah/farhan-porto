@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a5f7e"/>
+      <stop offset="1" stop-color="#5a3651"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- ink strokes -->
+  <g fill="#fff" opacity=".9">
+    <path d="M104 330c10 22 26 42 44 58-24-9-42-28-54-52z"/>
+    <path d="M134 306c8 14 18 25 30 34-16-5-28-16-35-30z"/>
+    <circle cx="160" cy="414" r="7"/>
+    <path d="M184 420c10-3 20-3 30 2-10 4-21 4-30-2z"/>
+  </g>
+  <!-- nib, rotated so the tip points down-left like the logo -->
+  <g transform="translate(268 252) rotate(45) scale(.86)">
+    <rect x="-62" y="-214" width="124" height="74" rx="18" fill="#fff"/>
+    <path d="M-86 -122 H86 C88 -30 52 70 0 178 C-52 70 -88 -30 -86 -122 Z" fill="#fff"/>
+    <path d="M0 26 V176" stroke="#6f4765" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="0" cy="8" r="22" fill="#6f4765"/>
+    <circle cx="0" cy="8" r="10" fill="#fff"/>
+  </g>
+</svg>

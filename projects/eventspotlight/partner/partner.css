@@ -1,0 +1,9 @@
+/* Event Spotlight partner portal (sponsors, vendors, artist teams). */
+.sh-top{background:#101B33;color:#fff;position:sticky;top:0;z-index:20}.sh-top .in{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sh-top .brand{font:700 22px var(--display);text-transform:uppercase;letter-spacing:.05em;color:#fff;text-decoration:none}.sh-top .who{color:#C9D2EA}
+.sh-wrap{max-width:1000px;margin:0 auto;padding:18px 16px}
+.ptabs{display:flex;gap:4px;border-bottom:3px solid var(--head);margin:14px 0;overflow-x:auto}.ptabs button{background:none;border:0;padding:12px 16px;min-height:48px;font:700 17px var(--display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);white-space:nowrap}.ptabs button.on{background:var(--head);color:#fff}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.kv .card{padding:14px}.kv .l{color:var(--muted);font-size:14px}.kv .v{font:700 24px var(--display)}
+.msg{max-width:78%;padding:10px 12px;border-radius:4px;margin:8px 0;border:1px solid var(--line)}.msg.me{margin-left:auto;background:var(--blue-soft);border-color:var(--blue)}.msg .t{font-size:13px;color:var(--muted);margin-top:4px}
+.prow{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line-2);flex-wrap:wrap}.prow .nm{flex:1;min-width:200px}
+.pv-wrap{margin-top:12px}

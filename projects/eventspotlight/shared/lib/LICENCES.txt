@@ -1,0 +1,7 @@
+Open source libraries included (loaded locally, nothing to install):
+- sql.js 1.10.3 (SQLite in WebAssembly): MIT License. https://github.com/sql-js/sql.js
+- SheetJS Community Edition 0.18.5 (Excel): Apache License 2.0. https://github.com/SheetJS/sheetjs
+- jsPDF 2.5.1 (PDF): MIT License. https://github.com/parallax/jsPDF
+- jsPDF-AutoTable 3.8.2 (PDF tables): MIT License. https://github.com/simonbengtsson/jsPDF-AutoTable
+- qr.js: written for this project, following the QR Code Model 2 specification (ISO/IEC 18004).
+Fonts (Barlow, Barlow Condensed): SIL Open Font License 1.1, loaded from Google Fonts when online; system fonts are used offline.

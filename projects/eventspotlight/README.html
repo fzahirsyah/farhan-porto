@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Event Spotlight: read me first</title>
+<style>body{font:16px/1.55 system-ui,sans-serif;max-width:900px;margin:0 auto;padding:24px 16px;color:#101B33;background:#F3F4F7}h1{font-size:34px;text-transform:uppercase;letter-spacing:.03em}h2{margin-top:30px;border-bottom:3px solid #101B33;padding-bottom:4px}a{color:#2F5BEA}table{border-collapse:collapse;width:100%;background:#fff}td,th{border:1px solid #C9CEDB;padding:8px 10px;text-align:left}th{background:#101B33;color:#fff}code{background:#E4E8F5;padding:1px 5px;border-radius:3px}.n{background:#FFF3C4;border-left:5px solid #FFC93C;padding:10px 14px;margin:14px 0}li{margin:4px 0}</style><script defer src="../portfolio-return-guard.js"></script></head><body>
+<h1>Event Spotlight</h1><p>Event management and ERP for Indonesian event organisers, with ticketing designed against scalpers (calo). This is a <b>working prototype that runs entirely in your browser</b>. No server, no installation.</p>
+<div class="n"><b>Open every app in the same Chrome profile.</b> They share one database stored in the browser, so a ticket bought in the shop shows up in the back office and at the gate. Keep the <code>shared/</code> folder next to the app folders.</div>
+<h2>1. Start here</h2><ol><li>Open <a href="erp/index.html">erp/index.html</a>. Choose <b>Demo data</b> (a concert, "Nusantara Sound Fest", is prepared). You can also start empty or open a .sqlite backup.</li><li>Log in by tapping a person and typing their PIN (the PIN is printed on each card in the demo).</li></ol>
+<h2>2. The six apps</h2><table><tr><th>App</th><th>Open</th><th>Who uses it</th><th>Login</th></tr>
+<tr><td>Back office (ERP)</td><td><a href="erp/index.html">erp/</a></td><td>Owner, director, finance, producer, ticketing, partnerships</td><td>PIN. Rina 1234 (owner), Hendra 2345, Bagas 3333, Siti 4444 (finance), Maya 5555, Andre 6666 (ticketing)</td></tr>
+<tr><td>Crew phone app</td><td><a href="crew/index.html">crew/</a></td><td>Gate staff and PICs, on phones</td><td>PIN. Joko 7777 (Gate A lead), Putri 8888, Wayan 9999, Dewi 1111, Rudi 2222</td></tr>
+<tr><td>Ticket shop and wallet</td><td><a href="shop/index.html">shop/</a></td><td>Ticket buyers</td><td>Phone number plus a 6-digit code. In the demo the code is shown on screen and sits in the ERP Outbox</td></tr>
+<tr><td>Partner portal</td><td><a href="partner/index.html">partner/</a></td><td>Sponsors, vendors, artist teams</td><td>Email plus code. Try partner@banknusa.example, sales@sonichall.example, dewiarka@mgmt.example</td></tr>
+<tr><td>Booth counter</td><td><a href="booth/index.html">booth/</a></td><td>Sponsor booth device</td><td>Pick a booth, enter its booth code (shown in the demo)</td></tr>
+<tr><td>Platform admin</td><td><a href="admin/index.html">admin/</a></td><td>The software operator, not event organisers</td><td>Platform PIN 0000</td></tr></table>
+<h2>3. A 10-minute walkthrough</h2><ol>
+<li><b>Fair sales.</b> ERP, Ticketing, Lottery: publish the seed fingerprint, run the draw, verify it. Then in the shop open <code>#/lottery</code>, check a result, and buy through a winner's link.</li>
+<li><b>Anti-calo wallet.</b> Shop, My wallet: the QR changes every 30 seconds. Transfer a ticket (flat Rp5.000 fee paid by the seller, at most face value). The old ticket stops working.</li>
+<li><b>Gate.</b> Crew app, Scan tab, Practice tools: a fresh code is admitted, an old (screenshot) code is refused, a second scan says already used. Switch to <i>Work offline</i>, scan, then go online to sync. Conflicts are shown and the earliest scan wins.</li>
+<li><b>Dispute desk.</b> A guest whose ticket was already used is sent to the desk: a code goes to the real buyer's phone, then a rescue ticket comes from a reserved pool.</li>
+<li><b>Money.</b> ERP, Vendors and orders: a vendor invoice that does not match the order or has no delivery confirmation cannot be paid without a written exception. Accounting shows the trial balance, income statement and balance sheet; they stay balanced after every action.</li>
+<li><b>Proposals.</b> ERP, Proposals: write a sponsor proposal, send it, open the link in the partner portal, accept it. A quotation, contract and invoice are created.</li>
+<li><b>Control room.</b> ERP, Control room, for the event-day wall display. Run the simulator in the crew app and watch it move.</li>
+<li><b>Configuration.</b> ERP, Settings: every rule has layers (platform, organiser, project, event, ticket type). Changes are drafts, then published, logged and reversible. Sensitive changes after sales open need a second person.</li></ol>
+<h2>4. Decisions built in</h2><ul><li>Ticket money goes 100% to the organiser except the payment admin fee. The software fee is one plan of Rp5.000.000 per organiser per year, no per-ticket fee.</li><li>Resale cap 100% of face value. Transfer fee flat Rp5.000, paid by the seller.</li><li>No approval limits by amount. A second person is needed only to export attendee data and to change ticket rules after sales open.</li><li>Sales order: community presale, public lottery, then open sale with a random queue.</li></ul>
+<h2>5. Honest limits of this prototype</h2><ul>
+<li><b>Data lives only in this browser</b> (IndexedDB). Clearing site data deletes it. Use Settings, Database, Download backup often. Anyone with access to the browser profile can read the data.</li>
+<li>Payments, SMS and email are <b>simulated</b>. Codes appear on screen and in the Outbox. Nothing leaves your computer.</li>
+<li>Offline gate checking uses a shared secret per ticket stored on the phone. A real product should use public-key signatures so a stolen phone cannot forge tickets.</li>
+<li>Camera QR scanning needs a browser with BarcodeDetector (Chrome on Android). Typing the code always works. Booth counting by camera is simple motion tracking; the simulator is for rehearsal. Real AI head-counting would need a proper model.</li>
+<li>Tax rates (PPN, PPh 23, stamp duty) are <b>placeholders and unverified</b>. Have an accountant check them before use.</li>
+<li>The service worker (offline shell for the crew app) only works when served over http(s) or localhost, not from a file.</li>
+<li>Fonts load from Google Fonts when online and fall back to system fonts offline.</li>
+<li>The demo has the "scan only on event day" rule switched off so you can rehearse today.</li>
+<li>A prototype is not a security audit. Before real money: server-side checks, real payment gateway, legal and data-protection review (Indonesia PDP law).</li></ul>
+</body></html>

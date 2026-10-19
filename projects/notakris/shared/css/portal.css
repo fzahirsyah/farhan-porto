@@ -1,0 +1,10 @@
+/* NotaKris — client portal (full design arrives in Phase 6) */
+.portal-wrap{min-height:100vh;padding:28px 16px;background:radial-gradient(circle at 20% 0%,#f6ecd6,transparent 50%),#efeae4}
+.portal{max-width:560px;margin:0 auto}
+.portal .head{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.portal .head img{height:28px}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--green)}
+.live .dot{animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.feed .it{animation:fl 1.2s}
+@keyframes fl{from{background:var(--gold-soft)}}

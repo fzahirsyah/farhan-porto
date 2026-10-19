@@ -1,0 +1,63 @@
+.tour-start { display: none; }
+.motion-off, .is-touring { scroll-behavior: auto !important; }
+.js-ready .tour-start { display: inline-flex; }
+.tour-start .icon { width: 15px; height: 15px; }
+.js-ready .hero-buttons > a[download] { padding-left: 12px; padding-right: 12px; border-color: transparent; background: transparent; box-shadow: none; }
+.tour-player {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+  width: min(570px, calc(100% - 36px)); z-index: 120;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 16px 20px; border: 1px solid #c8deef; border-radius: 18px;
+  background: #fbfefff0; backdrop-filter: blur(24px);
+  box-shadow: 0 18px 65px #204a7130; overflow: hidden;
+}
+.tour-progress { position: absolute; left: 0; top: 0; right: 0; height: 2px; background: #e2eef7; }
+.tour-progress i { display: block; width: 100%; height: 100%; transform: scaleX(var(--tour-progress,0)); transform-origin: left; background: linear-gradient(90deg,#087bff,#46cce7); }
+.tour-info { min-width: 135px; display: flex; flex-direction: column; gap: 5px; }
+.tour-info > span { font-size: 8px; letter-spacing: 1.4px; color: #8ca6bb; }
+.tour-info > strong { font-size: 12px; font-weight: 550; letter-spacing: -.2px; color: #3b6383; }
+.tour-controls { display: flex; align-items: center; gap: 6px; }
+.tour-controls > button { display: grid; place-items: center; background: transparent; border: 0; width: 29px; height: 29px; border-radius: 8px; color: #759bb9; padding: 4px; }
+.tour-controls > button:hover { background: #eaf5ff; color: #087bff; }
+.tour-controls .icon { width: 16px; height: 16px; }
+.tour-controls > .tour-play { width: 35px; height: 35px; border-radius: 50%; background: #087bff; color: white; margin: 0 3px; }
+.tour-controls > .tour-play:hover { background: #006de6; color: white; }
+.tour-controls > .tour-speed { font-size: 10px; margin-left: 4px; }
+.tour-controls > .tour-close { border-left: 1px solid #deebf5; border-radius: 0; margin-left: 6px; padding-left: 9px; }
+.tour-controls > button:disabled { opacity: .3; cursor: default; }
+.tour-time { font-size: 8px; color: #9eb3c3; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tour-player.is-paused { border-color: #cddfed; }
+.tour-player.is-paused .tour-info > span { color: #80a2bc; }
+.tour-player.is-complete .tour-info > span { color: #64a59c; }
+.is-touring .chapter-rail { opacity: .55; }
+.is-touring .scroll-cue { opacity: .4; }
+.has-motion .projects .stage { padding-bottom: 60px; }
+.has-motion .projects .project-preview { height: clamp(125px,18vh,185px); }
+.has-motion .projects .project-copy { padding-top: 17px; }
+.has-motion .projects .project-copy > p { font-size: 10px; min-height: 52px; line-height: 1.8; }
+.has-motion .projects .project-teaser { position: absolute; bottom: 80px; font-size: 8px; opacity: 0; margin-top: 0; }
+.has-motion .projects .project-status { transition: opacity .3s; }
+.has-motion .projects .project-card:hover .project-teaser { opacity: 1; }
+.has-motion .projects .project-card:hover .project-status { opacity: 0; }
+.has-motion .projects .project-open { margin-top: 16px; }
+.is-touring .project-card { transition-duration: .3s; }
+@media (max-width: 1150px) and (min-width: 961px) {
+  .hero .tour-start, .hero .manual-explore { padding-left: 15px; padding-right: 15px; font-size: 10px; gap: 10px; }
+  .has-motion .projects .project-teaser { bottom: 72px; font-size: 7px; }
+}
+@media (max-width: 640px) {
+  .hero-buttons { gap: 8px; }
+  .hero .tour-start, .hero .manual-explore { padding: 14px 17px; font-size: 11px; gap: 12px; }
+  .js-ready .hero-buttons > a[download] { width: 100%; justify-content: flex-start; min-height: 30px; padding: 5px 1px; font-size: 10px; }
+  .tour-player { bottom: max(12px,env(safe-area-inset-bottom)); border-radius: 15px; padding: 14px 13px; gap: 8px; }
+  .tour-info { min-width: 95px; gap: 4px; }
+  .tour-info > strong { font-size: 10px; max-width: 112px; }
+  .tour-info > span { font-size: 6px; letter-spacing: .8px; }
+  .tour-time { display: none; }
+  .tour-controls { gap: 2px; }
+  .tour-controls > button { width: 24px; height: 27px; }
+  .tour-controls > .tour-play { width: 31px; height: 31px; margin: 0 2px; }
+  .tour-controls .icon { width: 14px; height: 14px; }
+  .tour-controls > .tour-speed { font-size: 9px; margin-left: 3px; }
+  .tour-controls > .tour-close { margin-left: 4px; padding-left: 7px; width: 24px; }
+}
